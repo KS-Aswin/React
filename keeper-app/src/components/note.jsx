@@ -1,10 +1,13 @@
 import '../App.css'
-function Note(){
+function Note(props){
     return(
         <>
             <div className='note'>
-                <h1>Learning</h1>
-                <p>Learning React</p>
+                <h1>{props.title}</h1>
+                <div className='qA'>
+                    <p>{props.question}</p>
+                    <p>{props.answer}</p>
+                </div>
             </div>
         </>
     )

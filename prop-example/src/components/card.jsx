@@ -1,16 +1,17 @@
 import "../App.css";
 
-function Card({ name, img, phone, email }) {
+function Card(props) {
   return (
     <>
       <div className="cardValues">
         <div className="img">
-          <img src={img} alt="Images" />
+          <img src={props.img} alt="Images" />
         </div>
         <div className="cardDetails">
-          <h3>{name}</h3>
-          <p>{phone}</p>
-          <p>{email}</p>
+          <h3>{props.name}</h3>
+          <p>Id : {props.id}</p>
+          <p>{props.phone}</p>
+          <p>{props.email}</p>
         </div>
       </div>
     </>
