@@ -5,17 +5,18 @@ import contactDetails from "./contacts";
 function App() {
   return (
     <>
-      <h1 className="contactHeading">Contact Details</h1>
+      <h1 className="contactHeading">Anime Characters</h1>
       <div className="cards">
-      {contactDetails.map((contact, index) => (
-          <Card
-            key={index}
-            name={contact.name}
-            img={contact.img}
-            phone={contact.phone}
-            email={contact.email}
-          />
-        ))}
+        {contactDetails.map((contact, index) => (
+            <Card
+              key={index}
+              id={contact.id}
+              name={contact.name}
+              img={contact.img}
+              phone={contact.phone}
+              email={contact.email}
+            />
+          ))}
       </div>
     </>
   );

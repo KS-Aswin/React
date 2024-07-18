@@ -3,7 +3,7 @@ function Header(){
     return(
         <>
             <header>
-                <h1>Keep Note</h1>
+                <h1>Remember iT</h1>
             </header>
         </>
     )
