@@ -2,14 +2,13 @@ body {
   font: normal 14px/100% "Andale Mono", AndaleMono, monospace;
   color: #fff;
   padding: 50px;
-  width: 300px;
   margin: 0 auto;
   background-color: #374954;
   text-align: center;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .container {
@@ -26,5 +25,12 @@ button {
   text-align: center;
   color: #fff;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+.without{
+  margin-bottom: 5%;
+}
+.autoTime{
+  height: 30px;
 }
