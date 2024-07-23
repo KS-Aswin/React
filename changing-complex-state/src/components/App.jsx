@@ -38,7 +38,14 @@ function App() {
             placeholder="Last Name"
             value={fullName.lName}
           />
-          <button>Submit</button>
+          <button
+            onClick={() => {
+              props.onClickFunction(inputText);
+              setInputText("");
+            }}
+          >
+            Submit
+          </button>
         </form>
       </div>
     </>
