@@ -7,7 +7,7 @@ function Header() {
       
       <h1>
         <TipsAndUpdatesIcon />
-        Bucket list
+        Bucket lists
       </h1>
     </header>
   );
