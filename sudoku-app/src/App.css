@@ -1,0 +1,34 @@
+.App {
+  display: flex;
+  margin: 5%;
+  align-items: center;
+  justify-content: center;
+}
+.grid {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: aquamarine;
+  border: 1px solid #6b6b66;
+}
+.row {
+  display: flex;
+}
+.cell {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #6b6b66;
+}
+.cell > input {
+  width: fit-content;
+  height: 30px;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  width: 1ch;
+}
