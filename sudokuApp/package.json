@@ -1,5 +1,5 @@
 {
-  "name": "sudoku-app",
+  "name": "sudokuapp",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,9 +11,7 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "styled-components": "^6.1.12",
-    "sudoku": "^0.0.3"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
