@@ -1,34 +1,84 @@
-.App {
-  display: flex;
-  margin: 5%;
-  align-items: center;
-  justify-content: center;
-}
-.grid {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  background-color: aquamarine;
-  border: 1px solid #6b6b66;
-}
-.row {
-  display: flex;
-}
-.cell {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #6b6b66;
-}
-.cell > input {
+/* src/App.css */
+
+.sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 40px);
+  gap: 0; /* No gap between cells */
+  margin: 20px auto;
   width: fit-content;
-  height: 30px;
-  padding: 10px;
-  background-color: transparent;
-  border: none;
-  outline: none;
+}
+
+.sudoku-cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
   font-size: 20px;
-  width: 1ch;
+  border: 1px solid #ccc; /* Default border for cells */
+  box-sizing: border-box;
+}
+
+/* Add thicker borders to differentiate 3x3 sections */
+
+/* Borders between columns in each 3x3 block */
+.sudoku-board .sudoku-cell:nth-child(3n) {
+  border-right: 2px solid black; /* Right border for every 3rd cell */
+}
+
+/* Borders between rows in each 3x3 block */
+.sudoku-board .sudoku-cell:nth-child(n+73):nth-child(-n+81) {
+  border-bottom: 2px solid black; /* Bottom border for the last row of cells */
+}
+
+/* Top border for the first row */
+.sudoku-board .sudoku-cell:nth-child(-n+9) {
+  border-top: 2px solid black; /* Top border for the first row */
+}
+
+/* Left border for the first column */
+.sudoku-board .sudoku-cell:nth-child(1),
+.sudoku-board .sudoku-cell:nth-child(10),
+.sudoku-board .sudoku-cell:nth-child(19),
+.sudoku-board .sudoku-cell:nth-child(28),
+.sudoku-board .sudoku-cell:nth-child(37),
+.sudoku-board .sudoku-cell:nth-child(46),
+.sudoku-board .sudoku-cell:nth-child(55),
+.sudoku-board .sudoku-cell:nth-child(64),
+.sudoku-board .sudoku-cell:nth-child(73) {
+  border-left: 2px solid black; /* Left border for each 3x3 block */
+}
+
+/* Add thicker borders to separate 3x3 blocks */
+.sudoku-board .sudoku-cell:nth-child(27n+1) {
+  border-left: 2px solid black; /* Left border for the start of each 3x3 block column */
+}
+
+.sudoku-board .sudoku-cell:nth-child(9n+1) {
+  border-left: 2px solid black; /* Additional left borders for clarity */
+}
+
+.sudoku-board .sudoku-cell:nth-child(9n) {
+  border-right: 2px solid black; /* Right border for the end of each 3x3 block */
+}
+
+.sudoku-board .sudoku-cell:nth-child(27n) {
+  border-bottom: 2px solid black; /* Bottom border for each 3x3 block row */
+}
+
+
+
+/* Add bottom border specifically for all cells in the 3rd row */
+.sudoku-board .sudoku-cell:nth-child(n+19):nth-child(-n+27) {
+  border-bottom: 2px solid black; /* Bottom border for all cells in the 3rd row */
+}
+
+/* Add bottom border specifically for all cells in the 6th row */
+.sudoku-board .sudoku-cell:nth-child(n+46):nth-child(-n+54) {
+  border-bottom: 2px solid black; /* Bottom border for all cells in the 6th row */
+}
+
+/* Remove bottom border for specific cells */
+.sudoku-board .sudoku-cell:nth-child(20),
+.sudoku-board .sudoku-cell:nth-child(29),
+.sudoku-board .sudoku-cell:nth-child(80) {
+  border-bottom: none; /* Remove bottom border for the last cells in 2nd, 5th, and 8th rows */
 }
